@@ -71,8 +71,10 @@ Configuration:
 - 4 GB RAM  
 - 2 CPU cores  
 - 60 GB disk  
-- Windows Server 2025  
-- Static IP configuration  
+- Windows Server 2022 
+- Static IP configuration
+<img width="683" height="589" alt="image" src="https://github.com/user-attachments/assets/93322acc-adbd-448a-a76b-9ff451e52256" />
+  
 
 ### Client Workstation (PC1)
 
@@ -81,9 +83,15 @@ Configuration:
 - 4 GB RAM  
 - 2 CPU cores  
 - 50 GB disk  
-- Windows 11  
+- Windows 11
+<img width="676" height="589" alt="image" src="https://github.com/user-attachments/assets/a565eb41-6c03-4bbc-9ae5-e93fdb49b0c1" />
+
 
 Both VMs were connected to an **Internal Network named `LABNET`**.
+<img width="776" height="511" alt="image" src="https://github.com/user-attachments/assets/a971610c-9e9b-4e68-ad4e-a01eb919bf7a" />
+<img width="775" height="512" alt="image" src="https://github.com/user-attachments/assets/4d1abfc0-f9f3-49d3-a8ff-d89a1e2f0903" />
+
+
 
 ---
 
@@ -100,6 +108,8 @@ DNS Server: 192.168.10.10
 
 
 This server also functions as the **DNS server for the domain**.
+<img width="1297" height="900" alt="image" src="https://github.com/user-attachments/assets/80de2856-c4b4-4256-a663-3c591608ec6f" />
+
 
 ---
 
@@ -118,6 +128,9 @@ corp.local
 
 After installation, the server rebooted and the domain environment became active.
 
+<img width="1298" height="902" alt="image" src="https://github.com/user-attachments/assets/02a5152f-2f83-4bac-b9ff-4d35e8d6d12e" />
+
+
 ---
 
 # Step 4 — Create Organizational Units and Users
@@ -128,6 +141,8 @@ To simulate a corporate environment, the following Organizational Units were cre
 - Workstations
 - IT
 - Sales
+<img width="1085" height="616" alt="image" src="https://github.com/user-attachments/assets/5a36652d-c8da-429a-9b77-33b7f0abd95f" />
+
 
 Example user accounts were created:
 
@@ -138,6 +153,9 @@ Example user accounts were created:
 | Zarah Manzi | ZManzi |
 
 These accounts were used to test login, password reset, and permission management tasks.
+
+<img width="1081" height="616" alt="image" src="https://github.com/user-attachments/assets/152ceca0-09fd-48d0-ab04-803ce050512f" />
+
 
 ---
 
@@ -157,6 +175,9 @@ The client was then joined to the domain:
 
 corp.local
 
+<img width="997" height="616" alt="image" src="https://github.com/user-attachments/assets/a7ff641f-e477-4c73-a279-cb818b02aad1" />
+
+
 
 Domain login was verified using created user accounts.
 
@@ -168,7 +189,9 @@ A shared folder was created on the server to simulate a corporate file share.
 
 Example network path:
 
-`\\DC1\CompanyFiles`
+`\\CD11\CompanyFiles`
+<img width="496" height="328" alt="image" src="https://github.com/user-attachments/assets/313c8846-ac5a-43e2-a824-89cf66a82f56" />
+
 
 Permissions were configured using:
 
@@ -183,6 +206,8 @@ Access to the shared folder was verified from the client workstation.
 ## Step 7 — Group Policy Configuration
 
 A **Group Policy Object (GPO)** was created and linked to the **Workstations OU**.
+<img width="743" height="503" alt="image" src="https://github.com/user-attachments/assets/472021a2-1a9f-429a-a87f-954f6d4b0225" />
+
 
 Example policy implemented:
 
@@ -193,6 +218,8 @@ The policy was applied on the client machine using the following command:
 `gpupdate /force`
 
 Verification confirmed that the policy was successfully applied.
+<img width="872" height="536" alt="image" src="https://github.com/user-attachments/assets/948088c2-ff1c-478b-b321-abb0a3b0fe81" />
+
 
 ---
 
@@ -218,21 +245,6 @@ After updating the DNS configuration, the workstation successfully joined the do
 
 ---
 
-## Screenshots
-
-Example screenshots included in this repository:
-
-- VirtualBox network configuration
-- Windows Server installation
-- Active Directory domain creation
-- User account management
-- Successful domain login
-- Group Policy application
-
-Screenshots are stored in the **/screenshots** folder.
-
----
-
 ## Skills Demonstrated
 
 - Active Directory administration
@@ -250,7 +262,7 @@ Screenshots are stored in the **/screenshots** folder.
 ## Tools and Technologies
 
 - VirtualBox
-- Windows Server 2025
+- Windows Server 2022
 - Windows 11
 - Active Directory Domain Services
 - DNS
