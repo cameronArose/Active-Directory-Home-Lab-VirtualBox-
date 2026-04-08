@@ -39,7 +39,7 @@ Services:
 | Component | Configuration |
 |----------|--------------|
 | Hypervisor | VirtualBox |
-| Server OS | Windows Server 2025 |
+| Server OS | Windows Server 2022 |
 | Client OS | Windows 11 |
 | Domain | corp.local |
 | Server IP | 192.168.10.10 |
